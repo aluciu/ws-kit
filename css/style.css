@@ -2,21 +2,18 @@
 /******************************************************************
 Site Name: White Stripes UI Kit
 Author: Aurel Luciu
-
-Stylesheet: Main Stylesheet
-NOTE: DO NOT MODIFY THIS CSS FILE DIRECTLY! Please use custom.css!
 ******************************************************************/
 /* VARIABLES ============================================================================= */
 /* ======================================================================================= */
 /* TYPOGRAPHY ============================================================================ */
 /* entypo */
-/* line 31, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
 
 /* fontawesome */
-/* line 36, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
@@ -39,21 +36,21 @@ NOTE: DO NOT MODIFY THIS CSS FILE DIRECTLY! Please use custom.css!
 
 /* ======================================================================================= */
 /* OVERWRITE FOUNDATION ================================================================== */
-/* line 68, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 body {
   font-family: "nerislight", Geneva, Tahoma, Verdana, sans-serif;
   background: #3698b2;
   color: #fff;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-weight: normal;
   font-family: "nerissemibold", Geneva, Tahoma, Verdana, sans-serif;
 }
 
-/* line 93, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -69,14 +66,33 @@ input[type="time"],
 input[type="url"],
 textarea {
   background: transparent;
-  border: 4px solid #fff;
+  border: 2px solid #fff;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   text-transform: uppercase;
 }
 
-/* line 102, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
+button,
+.button {
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #11616f;
+  font-family: "nerislight", Geneva, Tahoma, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 115, ../sass/style.scss */
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  background-color: #fff;
+  color: #11616f;
+}
+
+/* line 120, ../sass/style.scss */
 .label {
   font-family: 'nerislight';
   font-size: 15px;
@@ -88,7 +104,7 @@ textarea {
 
 /* ======================================================================================= */
 /* ======================================================================================= */
-/* line 117, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 h1.logo {
   text-transform: uppercase;
   text-decoration: line-through;
@@ -96,10 +112,111 @@ h1.logo {
 }
 
 /* ======================================================================================= */
-/* ======================================================================================= */
-/* line 129, ../sass/style.scss */
+/* MODULES =============================================================================== */
+/* line 147, ../sass/style.scss */
 .ws-weather {
   border: 4px solid #fff;
+  margin-bottom: 2em;
+}
+
+/* line 152, ../sass/style.scss */
+.ws-tags {
+  margin-bottom: 2em;
+}
+
+/* line 156, ../sass/style.scss */
+.ws-signin {
+  border: 4px solid #fff;
+  padding: 21px;
+  margin-bottom: 2em;
+}
+/* line 161, ../sass/style.scss */
+.ws-signin .avatar {
+  border: 4px solid #fff;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  -ms-border-radius: 50em;
+  -o-border-radius: 50em;
+  border-radius: 50em;
+  width: 118px;
+  height: 118px;
+  margin: 0 auto 20px;
+  display: block;
+}
+/* line 169, ../sass/style.scss */
+.ws-signin label {
+  position: relative;
+}
+/* line 173, ../sass/style.scss */
+.ws-signin label.username:after {
+  content: "\f007";
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+}
+/* line 183, ../sass/style.scss */
+.ws-signin label.password:after {
+  content: "\f084";
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+}
+/* line 192, ../sass/style.scss */
+.ws-signin .signin-links {
+  font-size: 13px;
+}
+/* line 195, ../sass/style.scss */
+.ws-signin .signin-links a {
+  color: #fff;
+}
+/* line 200, ../sass/style.scss */
+.ws-signin .social-signin {
+  font-size: 13px;
+  margin-top: 8px;
+  text-align: center;
+}
+/* line 205, ../sass/style.scss */
+.ws-signin .social-signin p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+}
+/* line 210, ../sass/style.scss */
+.ws-signin .social-signin ul {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+/* line 216, ../sass/style.scss */
+.ws-signin .social-signin ul li {
+  display: inline-block;
+  margin: 0 8px;
+}
+/* line 220, ../sass/style.scss */
+.ws-signin .social-signin ul li a {
+  border: 2px #fff solid;
+  display: block;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 13px;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  -ms-border-radius: 50em;
+  -o-border-radius: 50em;
+  border-radius: 50em;
+}
+/* line 231, ../sass/style.scss */
+.ws-signin .social-signin ul li a span {
+  display: none;
 }
 
 /* ======================================================================================= */

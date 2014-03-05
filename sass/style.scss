@@ -1,9 +1,6 @@
 /******************************************************************
 Site Name: White Stripes UI Kit
 Author: Aurel Luciu
-
-Stylesheet: Main Stylesheet
-NOTE: DO NOT MODIFY THIS CSS FILE DIRECTLY! Please use custom.css!
 ******************************************************************/
 
 
@@ -11,6 +8,8 @@ NOTE: DO NOT MODIFY THIS CSS FILE DIRECTLY! Please use custom.css!
 
 
 /* VARIABLES ============================================================================= */
+@import "compass/css3";
+
 $bg-color: 			#3698b2;
 $main-color: 		#11616f;
 $secondary-color: 	#c5292a;
@@ -23,6 +22,7 @@ $secondary-color: 	#c5292a;
 /* TYPOGRAPHY ============================================================================ */
 $neris-light: 		'nerislight', Geneva, Tahoma, Verdana, sans-serif;
 $neris-semibold: 	'nerissemibold', Geneva, Tahoma, Verdana, sans-serif;
+$helvetica:         "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Icons
 @import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
@@ -93,11 +93,28 @@ input[type="time"],
 input[type="url"], 
 textarea {
 	background: transparent;
-	border: 4px solid #fff;
+	border: 2px solid #fff;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 	text-transform: uppercase;
+}
+
+button, 
+.button {
+    border: 2px solid #fff;
+    background-color: rgba(#fff,0.5);
+    color: #11616f;
+    font-family: $neris-light;
+    text-transform: uppercase;
+}
+
+button:hover, 
+button:focus, 
+.button:hover, 
+.button:focus {
+    background-color: #fff;
+    color: #11616f;
 }
 
 .label {
@@ -126,9 +143,95 @@ h1.logo {
 
 
 
-/* ======================================================================================= */
+/* MODULES =============================================================================== */
 .ws-weather {
     border: 4px solid #fff;
+    margin-bottom: 2em;
+}
+
+.ws-tags {
+    margin-bottom: 2em;
+}
+
+.ws-signin {
+    border: 4px solid #fff;
+    padding: 21px;
+    margin-bottom: 2em;
+
+    .avatar {
+        border: 4px solid #fff; @include border-radius(50em);
+        width: 118px;
+        height: 118px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+    
+    label {
+        position: relative;
+    }
+
+    label.username:after {
+        content:"\f007";
+        font-family: 'FontAwesome';
+        position: absolute;
+        top: 9px;
+        right: 13px;
+        color: rgba(#fff,0.5);
+        font-size: 18px;
+    }
+
+    label.password:after {
+        content:"\f084";
+        font-family: 'FontAwesome';
+        position: absolute;
+        top: 9px;
+        right: 13px;
+        color: rgba(#fff,0.5);
+        font-size: 18px;
+    }
+    .signin-links {
+        font-size: 13px;
+
+        a {color: #fff;}
+    }
+
+    
+
+    .social-signin {
+        font-size: 13px;
+        margin-top: 8px;
+        text-align: center;
+
+        p {
+            color: rgba(#fff,0.5);
+            margin-bottom: 8px
+        }
+
+        ul {
+            margin: 8px 0 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin: 0 8px;
+            }
+            li a {
+                border: 2px #fff solid;
+                display: block;
+                color: #fff;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                font-size: 13px;
+                @include border-radius(50em);
+
+                span {display: none;}
+            }
+        }
+    } 
 }
 /* ======================================================================================= */
 /* ======================================================================================= */
