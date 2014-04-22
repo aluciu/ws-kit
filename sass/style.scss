@@ -137,6 +137,8 @@ h1.logo {
 	text-decoration: line-through;
 	text-align: center;
 }
+
+.boxed {border: 4px solid #fff; padding: 21px;  margin-bottom: 2em;}
 /* ======================================================================================= */
 
 
@@ -172,9 +174,6 @@ h1.logo {
 }
 
 .ws-signin {
-    border: 4px solid #fff;
-    padding: 21px;
-    margin-bottom: 2em;
 
     .avatar {
         border: 4px solid #fff; @include border-radius(50em);
@@ -253,6 +252,13 @@ h1.logo {
         }
     } 
 }
+
+.ws-comment {
+    h3 {font-size: 1.4em; text-transform: uppercase;}
+    textarea {height: 100px; resize: none;}
+    button {margin-bottom: 0;}
+}
+
 /* ======================================================================================= */
 /* ======================================================================================= */
 
