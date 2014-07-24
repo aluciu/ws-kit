@@ -73,7 +73,12 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 104, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
+label {
+  color: #fff;
+}
+
+/* line 108, ../sass/style.scss */
 button,
 .button {
   border: 2px solid #fff;
@@ -83,7 +88,7 @@ button,
   text-transform: uppercase;
 }
 
-/* line 115, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 button:hover,
 button:focus,
 .button:hover,
@@ -92,7 +97,7 @@ button:focus,
   color: #11616f;
 }
 
-/* line 120, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 .label {
   font-family: 'nerislight';
   font-size: 15px;
@@ -104,14 +109,37 @@ button:focus,
 
 /* ======================================================================================= */
 /* ======================================================================================= */
-/* line 135, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* line 141, ../sass/style.scss */
+input[type="checkbox"] + label {
+  margin: 0;
+}
+/* line 144, ../sass/style.scss */
+input[type="checkbox"] + label:before {
+  content: "\f096";
+  font-family: 'FontAwesome', sans-serif;
+  margin-right: 0.2em;
+}
+
+/* line 149, ../sass/style.scss */
+input[type="checkbox"]:checked + label:before {
+  content: "\f046";
+}
+
+/* ======================================================================================= */
+/* ======================================================================================= */
+/* line 156, ../sass/style.scss */
 h1.logo {
   text-transform: uppercase;
   text-decoration: line-through;
   text-align: center;
 }
 
-/* line 141, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 .boxed {
   border: 4px solid #fff;
   padding: 21px;
@@ -120,23 +148,23 @@ h1.logo {
 
 /* ======================================================================================= */
 /* MODULES =============================================================================== */
-/* line 149, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 .ws-weather {
   border: 4px solid #fff;
   margin-bottom: 2em;
 }
-/* line 153, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 .ws-weather .current {
   padding: 20px 0 10px;
 }
-/* line 156, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 .ws-weather .current .climacon {
   display: block;
   text-align: center;
   font-size: 5em;
   line-height: 0.7em;
 }
-/* line 158, ../sass/style.scss */
+/* line 179, ../sass/style.scss */
 .ws-weather .current .day,
 .ws-weather .current .location {
   display: block;
@@ -144,25 +172,25 @@ h1.logo {
   font-size: 0.6em;
   font-family: "nerislight", Geneva, Tahoma, Verdana, sans-serif;
 }
-/* line 159, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 .ws-weather .current .temp {
   display: block;
   font-size: 2.4em;
   line-height: 1.2em;
 }
-/* line 162, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .ws-weather .next {
   background: #fff;
   padding: 10px 0;
   color: #11616f;
 }
-/* line 167, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .ws-weather .next .climacon {
   display: block;
   text-align: center;
   font-size: 2em;
 }
-/* line 168, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .ws-weather .next .day {
   display: block;
   text-align: center;
@@ -171,12 +199,12 @@ h1.logo {
   font-family: "nerissemibold", Geneva, Tahoma, Verdana, sans-serif;
 }
 
-/* line 172, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 .ws-tags {
   margin-bottom: 2em;
 }
 
-/* line 178, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .ws-signin .avatar {
   border: 4px solid #fff;
   -webkit-border-radius: 50em;
@@ -189,11 +217,11 @@ h1.logo {
   margin: 0 auto 20px;
   display: block;
 }
-/* line 186, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .ws-signin label {
   position: relative;
 }
-/* line 190, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .ws-signin label.username:after {
   content: "\f007";
   font-family: 'FontAwesome';
@@ -203,7 +231,7 @@ h1.logo {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
 }
-/* line 200, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 .ws-signin label.password:after {
   content: "\f084";
   font-family: 'FontAwesome';
@@ -213,38 +241,38 @@ h1.logo {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
 }
-/* line 209, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .ws-signin .signin-links {
   font-size: 13px;
 }
-/* line 212, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .ws-signin .signin-links a {
   color: #fff;
 }
-/* line 217, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .ws-signin .social-signin {
   font-size: 13px;
   margin-top: 8px;
   text-align: center;
 }
-/* line 222, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 .ws-signin .social-signin p {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 8px;
 }
-/* line 227, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .ws-signin .social-signin ul {
   margin: 8px 0 0;
   padding: 0;
   list-style: none;
   text-align: center;
 }
-/* line 233, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 .ws-signin .social-signin ul li {
   display: inline-block;
   margin: 0 8px;
 }
-/* line 237, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 .ws-signin .social-signin ul li a {
   border: 2px #fff solid;
   display: block;
@@ -260,27 +288,27 @@ h1.logo {
   -o-border-radius: 50em;
   border-radius: 50em;
 }
-/* line 248, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
 .ws-signin .social-signin ul li a span {
   display: none;
 }
-/* line 250, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 .ws-signin .social-signin ul li a:hover {
   background: #fff;
   color: #11616f;
 }
 
-/* line 257, ../sass/style.scss */
+/* line 278, ../sass/style.scss */
 .ws-comment h3 {
   font-size: 1.4em;
   text-transform: uppercase;
 }
-/* line 258, ../sass/style.scss */
+/* line 279, ../sass/style.scss */
 .ws-comment textarea {
   height: 100px;
   resize: none;
 }
-/* line 259, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .ws-comment button {
   margin-bottom: 0;
 }
