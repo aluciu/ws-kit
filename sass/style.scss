@@ -280,6 +280,47 @@ h1.logo {
     button {margin-bottom: 0;}
 }
 
+ul.ws-pagination {
+
+    text-align: center;
+
+
+    li {
+        display: inline-block;
+        float: none;
+        color: #fff;
+        font-size: 12px;
+
+        &.arrow.unavailable {
+            display: none;
+        }
+
+        a {
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 0;
+        }
+        &.unavailable a {
+                border: none;
+                color: #fff;
+        }
+        &.current a {
+            background-color: rgba(#fff,0.5);
+            color: $main-color;
+
+            &:hover,
+            &:focus {
+                background-color: #fff;
+            }
+        }
+        &:hover a, 
+        a:focus {
+            background-color: #fff;
+            color: $main-color;
+        }
+    }
+}
+
 /* ======================================================================================= */
 /* ======================================================================================= */
 
