@@ -2,17 +2,31 @@
 Site Name: White Stripes UI Kit
 Author: Aurel Luciu
 ******************************************************************/
-
+@import "compass";
+@import "compass/reset";
+@import "susy";
 
 
 
 
 /* VARIABLES ============================================================================= */
-@import "compass/css3";
-
 $bg-color: 			#3698b2;
 $main-color: 		#11616f;
 $secondary-color: 	#c5292a;
+
+// Breakpoints
+$bp-s: 420px;
+$bp-m: 720px;
+$bp-l: 1100px;
+
+// Susy
+$susy: (
+  columns: 12,
+  container: 900px,
+  gutters: 0.1,
+  global-box-sizing: border-box,
+  debug: (image: show)
+);
 /* ======================================================================================= */
 
 
@@ -64,6 +78,32 @@ $helvetica:         "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 
+/* LAYOUT ================================================================================ */
+@include border-box-sizing;
+.wrapper {
+    @include container;    
+}
+.box-container {
+    div[class^="box-"], 
+    div[class*=" box-"] {
+        padding: 0 1em;
+        float: left;        
+    }
+    .box-sm {
+        width: 33.33%;
+
+    }
+    .box-md {
+
+        width: 66.63%;
+    }
+    .box-lg {
+        width: 100%;
+    }    
+}
+/* ======================================================================================= */
+
+
 
 /* OVERWRITE FOUNDATION ================================================================== */
 body {
@@ -78,19 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $neris-semibold;
 }
 
-input[type="text"], 
-input[type="password"], 
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"], 
-input[type="month"], 
-input[type="week"], 
-input[type="email"], 
-input[type="number"], 
-input[type="search"], 
-input[type="tel"], 
-input[type="time"], 
-input[type="url"], 
+input, 
 textarea {
 	background: transparent;
 	border: 2px solid #fff;
@@ -122,6 +150,7 @@ button:focus,
 }
 
 .label {
+    display: inline-block;
     font-family: 'nerislight';
     font-size: 15px;
     background-color: #fff;
@@ -169,10 +198,17 @@ h1.logo {
 /* MODULES =============================================================================== */
 .ws-weather {
     border: 4px solid #fff;
-    margin-bottom: 2em;
 
     .current {
         padding: 20px 0 10px;
+        @include clearfix;
+
+        .icon {
+            @include span(1 of 2);
+        }
+        .details {
+            @include span(1 of 2 last);
+        }
 
         .climacon {display: block; text-align: center; font-size: 5em; line-height: 0.7em;}
         .day,
@@ -184,6 +220,14 @@ h1.logo {
         background: #fff;
         padding: 10px 0;
         color: $main-color;
+        @include clearfix;
+
+        .forecast {
+            @include span(1 of 4);
+            &:last-child {
+                margin: 0;
+            }
+        }
 
         .climacon {display: block; text-align:center; font-size: 2em;}
         .day {display: block; text-align: center; text-transform: uppercase; font-size: 0.8em; font-family: $neris-semibold;}

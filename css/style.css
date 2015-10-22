@@ -2,18 +2,83 @@
 Site Name: White Stripes UI Kit
 Author: Aurel Luciu
 ******************************************************************/
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 /* VARIABLES ============================================================================= */
 /* ======================================================================================= */
 /* TYPOGRAPHY ============================================================================ */
-@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
 /* entypo */
-/* line 32, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
 
 /* fontawesome */
-/* line 37, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
@@ -33,35 +98,74 @@ Author: Aurel Luciu
   font-style: normal;
 }
 /* ======================================================================================= */
+/* LAYOUT ================================================================================ */
+/* line 21, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.5/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 83, ../sass/style.scss */
+.wrapper {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI5MC45MDkwOSUiIHN0b3AtY29sb3I9IiNiM2IzZmYiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iOTAuOTA5MDklIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(90.90909%, rgba(179, 179, 255, 0.25)), color-stop(90.90909%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: 8.39695%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 87, ../sass/style.scss */
+.box-container div[class^="box-"],
+.box-container div[class*=" box-"] {
+  padding: 0 1em;
+  float: left;
+}
+/* line 92, ../sass/style.scss */
+.box-container .box-sm {
+  width: 33.33%;
+}
+/* line 96, ../sass/style.scss */
+.box-container .box-md {
+  width: 66.63%;
+}
+/* line 100, ../sass/style.scss */
+.box-container .box-lg {
+  width: 100%;
+}
+
+/* ======================================================================================= */
 /* OVERWRITE FOUNDATION ================================================================== */
-/* line 69, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 body {
   font-family: "nerislight", Geneva, Tahoma, Verdana, sans-serif;
   background: #3698b2;
   color: #fff;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-weight: normal;
   font-family: "nerissemibold", Geneva, Tahoma, Verdana, sans-serif;
 }
 
-/* line 81, ../sass/style.scss */
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
+/* line 121, ../sass/style.scss */
+input,
 textarea {
   background: transparent;
   border: 2px solid #fff;
@@ -71,12 +175,12 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 103, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 label {
   color: #fff;
 }
 
-/* line 107, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 button,
 .button {
   border: 2px solid #fff;
@@ -86,7 +190,7 @@ button,
   text-transform: uppercase;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 button:hover,
 button:focus,
 .button:hover,
@@ -95,8 +199,9 @@ button:focus,
   color: #11616f;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 .label {
+  display: inline-block;
   font-family: 'nerislight';
   font-size: 15px;
   background-color: #fff;
@@ -107,37 +212,37 @@ button:focus,
 
 /* ======================================================================================= */
 /* ======================================================================================= */
-/* line 137, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 input[type="checkbox"] {
   display: none;
 }
 
-/* line 141, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 input[type="checkbox"] + label {
   margin: 0;
 }
-/* line 144, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 input[type="checkbox"] + label:before {
   content: "\f096";
   font-family: 'FontAwesome', sans-serif;
   margin-right: 0.2em;
 }
 
-/* line 149, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 input[type="checkbox"]:checked + label:before {
   content: "\f046";
 }
 
 /* ======================================================================================= */
 /* ======================================================================================= */
-/* line 156, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 h1.logo {
   text-transform: uppercase;
   text-decoration: line-through;
   text-align: center;
 }
 
-/* line 162, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 .boxed {
   border: 4px solid #fff;
   padding: 21px;
@@ -146,23 +251,36 @@ h1.logo {
 
 /* ======================================================================================= */
 /* MODULES =============================================================================== */
-/* line 170, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .ws-weather {
   border: 4px solid #fff;
-  margin-bottom: 2em;
 }
-/* line 174, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .ws-weather .current {
   padding: 20px 0 10px;
+  overflow: hidden;
+  *zoom: 1;
 }
-/* line 177, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
+.ws-weather .current .icon {
+  width: 47.61905%;
+  float: left;
+  margin-right: 4.7619%;
+}
+/* line 209, ../sass/style.scss */
+.ws-weather .current .details {
+  width: 47.61905%;
+  float: right;
+  margin-right: 0;
+}
+/* line 213, ../sass/style.scss */
 .ws-weather .current .climacon {
   display: block;
   text-align: center;
   font-size: 5em;
   line-height: 0.7em;
 }
-/* line 178, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .ws-weather .current .day,
 .ws-weather .current .location {
   display: block;
@@ -170,25 +288,37 @@ h1.logo {
   font-size: 0.6em;
   font-family: "nerislight", Geneva, Tahoma, Verdana, sans-serif;
 }
-/* line 180, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 .ws-weather .current .temp {
   display: block;
   font-size: 2.4em;
   line-height: 1.2em;
 }
-/* line 183, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 .ws-weather .next {
   background: #fff;
   padding: 10px 0;
   color: #11616f;
+  overflow: hidden;
+  *zoom: 1;
 }
-/* line 188, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
+.ws-weather .next .forecast {
+  width: 23.25581%;
+  float: left;
+  margin-right: 2.32558%;
+}
+/* line 227, ../sass/style.scss */
+.ws-weather .next .forecast:last-child {
+  margin: 0;
+}
+/* line 232, ../sass/style.scss */
 .ws-weather .next .climacon {
   display: block;
   text-align: center;
   font-size: 2em;
 }
-/* line 189, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .ws-weather .next .day {
   display: block;
   text-align: center;
@@ -197,12 +327,12 @@ h1.logo {
   font-family: "nerissemibold", Geneva, Tahoma, Verdana, sans-serif;
 }
 
-/* line 193, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .ws-tags {
   margin-bottom: 2em;
 }
 
-/* line 199, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 .ws-signin .avatar {
   border: 4px solid #fff;
   -moz-border-radius: 50em;
@@ -213,11 +343,11 @@ h1.logo {
   margin: 0 auto 20px;
   display: block;
 }
-/* line 207, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 .ws-signin label {
   position: relative;
 }
-/* line 211, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 .ws-signin label.username:after {
   content: "\f007";
   font-family: 'FontAwesome';
@@ -227,7 +357,7 @@ h1.logo {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
 }
-/* line 221, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .ws-signin label.password:after {
   content: "\f084";
   font-family: 'FontAwesome';
@@ -237,38 +367,38 @@ h1.logo {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
 }
-/* line 230, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 .ws-signin .signin-links {
   font-size: 13px;
 }
-/* line 233, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .ws-signin .signin-links a {
   color: #fff;
 }
-/* line 238, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 .ws-signin .social-signin {
   font-size: 13px;
   margin-top: 8px;
   text-align: center;
 }
-/* line 243, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .ws-signin .social-signin p {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 8px;
 }
-/* line 248, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .ws-signin .social-signin ul {
   margin: 8px 0 0;
   padding: 0;
   list-style: none;
   text-align: center;
 }
-/* line 254, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 .ws-signin .social-signin ul li {
   display: inline-block;
   margin: 0 8px;
 }
-/* line 258, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .ws-signin .social-signin ul li a {
   border: 2px #fff solid;
   display: block;
@@ -282,67 +412,67 @@ h1.logo {
   -webkit-border-radius: 50em;
   border-radius: 50em;
 }
-/* line 269, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 .ws-signin .social-signin ul li a span {
   display: none;
 }
-/* line 271, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .ws-signin .social-signin ul li a:hover {
   background: #fff;
   color: #11616f;
 }
 
-/* line 278, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 .ws-comment h3 {
   font-size: 1.4em;
   text-transform: uppercase;
 }
-/* line 279, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .ws-comment textarea {
   height: 100px;
   resize: none;
 }
-/* line 280, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .ws-comment button {
   margin-bottom: 0;
 }
 
-/* line 283, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 ul.ws-pagination {
   text-align: center;
 }
-/* line 288, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 ul.ws-pagination li {
   display: inline-block;
   float: none;
   color: #fff;
   font-size: 12px;
 }
-/* line 294, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 ul.ws-pagination li.arrow.unavailable {
   display: none;
 }
-/* line 298, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 ul.ws-pagination li a {
   color: #fff;
   border: 2px solid #fff;
   border-radius: 0;
 }
-/* line 303, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 ul.ws-pagination li.unavailable a {
   border: none;
   color: #fff;
 }
-/* line 307, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 ul.ws-pagination li.current a {
   background-color: rgba(255, 255, 255, 0.5);
   color: #11616f;
 }
-/* line 311, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 ul.ws-pagination li.current a:hover, ul.ws-pagination li.current a:focus {
   background-color: #fff;
 }
-/* line 316, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 ul.ws-pagination li:hover a,
 ul.ws-pagination li a:focus {
   background-color: #fff;
