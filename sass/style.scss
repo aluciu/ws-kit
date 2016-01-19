@@ -129,6 +129,29 @@ button:focus,
     padding: 0.7em 0.5em;
     margin-bottom: 0.2em;
 }
+
+
+.tabs dd, 
+.tabs .tab-title {
+    margin-right: 1.2rem;
+}
+.tabs dd > a, 
+.tabs .tab-title > a {
+    padding: 0.2rem 0;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;    
+}
+.tabs dd.active > a, 
+.tabs .tab-title.active > a {
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.tabs dd > a:hover, 
+.tabs .tab-title > a:hover {
+    background-color: transparent;
+}
 /* ======================================================================================= */
 
 
@@ -318,6 +341,16 @@ ul.ws-pagination {
             background-color: #fff;
             color: $main-color;
         }
+    }
+}
+
+.article-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        border-bottom: 1px solid #35393f;
     }
 }
 
